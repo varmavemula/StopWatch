@@ -1,0 +1,130 @@
+body{
+    text-align: center;
+    padding: 0;
+    margin-top: 10%;
+    margin-right: 10%;
+    background-color: rgb(33, 16, 132);
+    background-image: url();
+    /* background: repeating-linear-gradient(45deg, grey, darkgrey 1px,black 20px); */
+
+}
+
+
+h1{
+    color: white;
+    display: inline-block;
+    margin-right: 30px;
+    font-weight: 200;
+}
+
+
+
+/* @keyframes colorchange {
+    from{
+        color: red;
+        font-size: 
+    }
+    to{
+        color: blue;
+        font-size: 100%;
+    }
+    
+} */
+
+#stopwatch-frame{
+    border: 3px solid rgba(255,255,255,0.25);
+    width:50%;
+    min-width: 450px;
+    padding:20px;
+    margin-left: 25%;
+    height: fit-content;
+    background-color: #4870c034;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px 5px rgba(250, 248, 248, 0.25);
+    border-radius: 20px;
+    
+}
+
+#stopwatch-timer{
+    border: 3px solid blue;
+    color: aliceblue;
+    width:fit-content;
+    min-width: 380px;
+    /* margin-left: 25%; */
+    margin: 0 auto;
+    height:fit-content;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 50px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 17%, rgba(0,212,255,1) 100%);
+    
+}
+
+#timer-value {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-size:4.2em;
+    /* position: absolute; */
+    height:100%;
+    width: 100%; 
+    
+    /* border: 2px solid black; */
+    
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    
+
+}
+
+.btn{
+    font-size: medium;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    
+}
+
+.start{
+    background-color: greenyellow;
+    filter: drop-shadow(10px 10px 10px #02501e);
+
+}
+
+.stop{
+    /* background-color: orangered; */
+    filter: drop-shadow(10px 10px 10px #050505);
+}
+
+.reset{
+    background-color: orangered;
+    filter: drop-shadow(10px 10px 10px brown);
+}
+
+.start:focus{
+    background-color: green;
+    --stopwatchcolor:green;
+}
+.stop:focus{
+    background-color: dimgrey;
+    --stopwatchcolor:dimgrey;
+}
+
+.reset:active{
+    background-color: brown;
+    color: white;
+    --stopwatchcolor:brown;
+}
+
+i{
+    text-shadow: 1px 1px 10px white;
+    font-size: 3em;
+    color:var(--stopwatchcolor);
+    /* color:red; */
+    /* animation: colorchange 1s ease-in-out infinite alternate forwards; */
+}
