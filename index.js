@@ -42,9 +42,11 @@ function timer(){
     if(milli_sec_count===0) sec_count = (sec_count+1)%60;
 }
 
+//stopcount function to pause the timer
 function stopCount(){
+    //flag should be set zero to make the start button work again. else the start button wont trigger the startCount() function
     flag = 0;
-    document.getElementById("icon").style.color = "red";
+    document.getElementById("icon").style.color = "red";//timer icon color will change to red
     clearInterval(sec_interval);
     clearInterval(min_interval);
 }
@@ -53,9 +55,11 @@ function resetTimer(){
     flag = 0;
     stopCount();
     document.getElementById("icon").style.color = "black";
+    //all the values of variables set to zero again
     milli_sec_count=0;
     sec_count = 0;
     min_count = 0;
+    //all the number text on the page will be changed to "00"
     document.getElementsByClassName("min")[0].innerText = "00";
     document.getElementsByClassName("sec")[0].innerText = "00";
     document.getElementsByClassName("milli-sec")[0].innerText = "00";
