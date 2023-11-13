@@ -19,10 +19,15 @@ var sec_count = 0;
 var min_count = 0;
 
 
-//flag option is 
+//flag option is used to know the flow of operations
 var flag = 0;
 
 function startCount(){
+    /*
+    1. Set startCount function to start only when the flag is 0 to prevent the mislead of stopwatch process.
+    2. If we dont use the flag, we can run the stopwatch only once as expected. then, the stopwatch wont work as required.
+    3. By using flag, we can use the stopwatch any number of times without reloading the page.
+    */
     if (flag == 0){
     
         sec_interval = setInterval(timer,10);
@@ -54,7 +59,7 @@ function stopCount(){
 function resetTimer(){
     flag = 0;
     stopCount();
-    document.getElementById("icon").style.color = "black";
+    document.getElementById("icon").style.color = "black";// timer icon color will change to black
     //all the values of variables set to zero again
     milli_sec_count=0;
     sec_count = 0;
