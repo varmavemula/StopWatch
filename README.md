@@ -1,4 +1,4 @@
-
+My StopWatch project is deployed on Github, take a look: https://varmavemula.github.io/StopWatch/
 # What is this project about?
 In this project, a stopwatch timer page is created using HTML, CSS and javascript.
   ## StopWatch
